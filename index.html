@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>todolist</title>
-    <style>
-        p{
-           display: block;
-           visibility: visible;
-        }
-    </style>
+
 </head>
 <body>
     <div  id="div" >
 
     </div>
-    <input type="text" id="inp" >
+    <input type="text" id="inp" value='ADD A TASK HERE...' onfocus="if (this.value=='ADD A TASK HERE...') this.value='';">
    
   
 
 
 
 <script type="text/javascript">
+
+
+
+
+
 
 const para = document.createElement('P');
 if(!!localStorage.getItem('task')){
@@ -33,10 +34,16 @@ para.append(localStorage.getItem('task'));
 parent.append(para);
 
 };
+
 para.onclick = function(){
     localStorage.removeItem('task');
+    para.style.display ='none';
     location.reload();
 }
+
+
+
+
 
 const para2 = document.createElement('P');
 if(!!localStorage.getItem('task2')){
@@ -114,7 +121,13 @@ inpt.addEventListener('keyup', function(event){
      para5.classList.add('red');
 
      para5.append(localStorage.getItem('task5'));
-
+     parent5.append(para5);
+     document.getElementById('inp').value = '';
+     para5.onclick = function(){
+    localStorage.removeItem('task5');
+    para5.style.display ='none';
+    location.reload();
+}
     
 
 
@@ -129,7 +142,12 @@ inpt.addEventListener('keyup', function(event){
 
      para4.append(localStorage.getItem('task4'));
      parent4.append(para4);
-
+     document.getElementById('inp').value = '';
+     para4.onclick = function(){
+    localStorage.removeItem('task4');
+    para4.style.display ='none';
+    location.reload();
+}
 
               }
         else if(!!localStorage.getItem('task2')){
@@ -140,7 +158,12 @@ inpt.addEventListener('keyup', function(event){
 
      para3.append(localStorage.getItem('task3'));
      parent3.append(para3);
-
+     document.getElementById('inp').value = '';
+     para.onclick = function(){
+    localStorage.removeItem('task');
+    para.style.display ='none';
+    location.reload();
+}
 
         }
         
@@ -151,7 +174,12 @@ inpt.addEventListener('keyup', function(event){
      para2.classList.add('red');
      para2.append(localStorage.getItem('task2'));
      parent2.append(para2);
-   
+     document.getElementById('inp').value = '';
+     para.onclick = function(){
+    localStorage.removeItem('task');
+    para.style.display ='none';
+    location.reload();
+}
 
               }else{
                 localStorage.setItem('task', document.getElementById('inp').value);
@@ -160,8 +188,13 @@ inpt.addEventListener('keyup', function(event){
      para.classList.add('red');
      para.append(localStorage.getItem('task'));
      parent.append(para);
+     document.getElementById('inp').value = '';
+     para.onclick = function(){
+    localStorage.removeItem('task');
+    para.style.display ='none';
+    location.reload();
+}
 
-   
 
               }
   

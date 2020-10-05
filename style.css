@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+input{
+    position: relative;
+    
+    top: 30vh;
+}
+p{
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Nunito',sans-serif;
+
+    
+ }
+
+ #inp{
+    border: 2px solid #24292e;
+     border-radius: 10px;
+     padding: 0.2em;
+     color: grey;
+ }
+
+ @media only screen and (max-width:320px){
+
+ }
