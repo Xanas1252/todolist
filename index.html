@@ -1,47 +1,189 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Personal website">
-        <link rel="stylesheet" type="text/css" href="style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-         <title>todo list </title>
-    </head>
-    <body>
-<h1>
-    20 july 2020
-</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <style>
+        p{
+           display: block;
+           visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div  id="div" >
 
-<section class="the-list">
-    <div class="todolist">
-<ul style="list-style: none;">
-    <li><form>
-        <input type="checkbox" name="task1" >
-        <label for="task1"> wash the dishes blah blah blah</label>
-    </form></li>
-    <li><form>
-        <input type="checkbox" name="task2" >
-        <label for="task2"> Make your bed</label>
-    </form></li>
-    <li><form>
-        <input type="checkbox" name="task3" >
-        <label for="task3"> sign that contract</label>
-    </form></li>
-    <li><form>
-        <input type="checkbox" name="task4" >
-        <label for="task4"> pay the wifi bill</label>
-    </form></li>
-    <li><form>
-        <input type="checkbox" name="task5" >
-        <label for="task5"> bring back the car</label>
-    </form></li>
-    <li><form>
-        <input type="checkbox" name="task6" >
-        <label for="task6"> buy the gift </label>
-    </form></li>
-</ul>
     </div>
-</section>
-    </body>
+    <input type="text" id="inp" >
+   
+  
+
+
+
+<script type="text/javascript">
+
+const para = document.createElement('P');
+if(!!localStorage.getItem('task')){
+
+const parent = document.getElementById('div') ;  
+
+para.classList.add('red');
+para.append(localStorage.getItem('task'));
+parent.append(para);
+
+};
+para.onclick = function(){
+    localStorage.removeItem('task');
+    location.reload();
+}
+
+const para2 = document.createElement('P');
+if(!!localStorage.getItem('task2')){
+
+const parent2 = document.getElementById('div') ;  
+
+para2.classList.add('red');
+
+para2.append(localStorage.getItem('task2'));
+parent2.append(para2);
+
+};
+para2.onclick = function(){
+    localStorage.removeItem('task2');
+    location.reload();
+}
+const para3 = document.createElement('P');
+if(!!localStorage.getItem('task3')){
+
+const parent3 = document.getElementById('div') ;  
+
+para3.classList.add('red');
+
+para3.append(localStorage.getItem('task3'));
+parent3.append(para3);
+
+};
+para3.onclick = function(){
+    localStorage.removeItem('task3');
+    location.reload();
+}
+
+const para4 = document.createElement('P');
+if(!!localStorage.getItem('task4')){
+
+const parent4 = document.getElementById('div') ;  
+
+para4.classList.add('red');
+
+para4.append(localStorage.getItem('task4'));
+parent4.append(para4);
+
+};
+para4.onclick = function(){
+    localStorage.removeItem('task4');
+    location.reload();
+}
+
+const para5 = document.createElement('P');
+if(!!localStorage.getItem('task5')){
+
+const parent5 = document.getElementById('div') ;  
+
+para5.classList.add('red');
+
+para5.append(localStorage.getItem('task5'));
+parent5.append(para5);
+
+};
+para5.onclick = function(){
+    localStorage.removeItem('task5');
+    location.reload();
+}
+
+const inpt = document.getElementById('inp');
+
+
+
+inpt.addEventListener('keyup', function(event){
+    if(event.keyCode === 13){
+      if(!!localStorage.getItem('task4')){
+      localStorage.setItem('task5',document.getElementById('inp').value);
+      const parent5 = document.getElementById('div') ;  
+     const para5 = document.createElement('P');
+     para5.classList.add('red');
+
+     para5.append(localStorage.getItem('task5'));
+
+    
+
+
+              }
+     
+
+        else if(!!localStorage.getItem('task3')){
+                        localStorage.setItem('task4',document.getElementById('inp').value);
+                        const parent4 = document.getElementById('div') ;  
+     const para4 = document.createElement('P');
+     para4.classList.add('red');
+
+     para4.append(localStorage.getItem('task4'));
+     parent4.append(para4);
+
+
+              }
+        else if(!!localStorage.getItem('task2')){
+            localStorage.setItem('task3',document.getElementById('inp').value);
+                        const parent3 = document.getElementById('div') ;  
+     const para3 = document.createElement('P');
+     para3.classList.add('red');
+
+     para3.append(localStorage.getItem('task3'));
+     parent3.append(para3);
+
+
+        }
+        
+              else if(!!localStorage.getItem('task')){
+                        localStorage.setItem('task2',document.getElementById('inp').value);
+                        const parent2 = document.getElementById('div') ;  
+     const para2 = document.createElement('P');
+     para2.classList.add('red');
+     para2.append(localStorage.getItem('task2'));
+     parent2.append(para2);
+   
+
+              }else{
+                localStorage.setItem('task', document.getElementById('inp').value);
+     const parent = document.getElementById('div') ;  
+     const para = document.createElement('p');
+     para.classList.add('red');
+     para.append(localStorage.getItem('task'));
+     parent.append(para);
+
+   
+
+              }
+  
+
+
+    }
+
+
+
+});
+
+
+
+//if we click 3la a certain task => delete that task and it's local storage 
+
+
+
+
+</script>
+</body>
 </html>
+
+
+
+
