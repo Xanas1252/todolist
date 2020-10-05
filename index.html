@@ -26,21 +26,22 @@
 
 const para = document.createElement('P');
 if(!!localStorage.getItem('task')){
-
 const parent = document.getElementById('div') ;  
-
 para.classList.add('red');
 para.append(localStorage.getItem('task'));
 parent.append(para);
 
 };
 
+
+
 para.onclick = function(){
+ 
     localStorage.removeItem('task');
     para.style.display ='none';
     location.reload();
+   
 }
-
 
 
 
@@ -123,6 +124,7 @@ inpt.addEventListener('keyup', function(event){
      para5.append(localStorage.getItem('task5'));
      parent5.append(para5);
      document.getElementById('inp').value = '';
+
      para5.onclick = function(){
     localStorage.removeItem('task5');
     para5.style.display ='none';
@@ -189,10 +191,13 @@ inpt.addEventListener('keyup', function(event){
      para.append(localStorage.getItem('task'));
      parent.append(para);
      document.getElementById('inp').value = '';
+
      para.onclick = function(){
     localStorage.removeItem('task');
     para.style.display ='none';
     location.reload();
+
+   
 }
 
 
