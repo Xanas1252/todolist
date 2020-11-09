@@ -13,6 +13,15 @@
     </div>
     <input type="text" id="inp" value='ADD A TASK HERE...' onfocus="if (this.value=='ADD A TASK HERE...') this.value='';">
    
+   <br><br>
+   <br><br>
+   <br><br>
+
+    <div  id="div2" >
+
+    </div>
+    <input type="text" id="inp2" value='ADD A THE REASON HERE...' onfocus="if (this.value=='ADD A THE REASON HERE...') this.value='';">
+   
   
 
 
@@ -20,6 +29,50 @@
 <script type="text/javascript">
 
 
+const parax = document.createElement('P');
+if(!!localStorage.getItem('reason')){
+const parent2 = document.getElementById('div2') ;  
+parax.classList.add('red');
+parax.append(localStorage.getItem('reason'));
+
+parent2.append(parax);
+
+};
+
+
+
+parax.onclick = function(){
+ 
+    localStorage.removeItem('reason');
+    parax.style.display ='none';
+    location.reload();
+   
+}
+
+
+const inpt2 = document.getElementById('inp2');
+
+
+inpt2.addEventListener('keyup', function(event){
+    if(event.keyCode === 13){
+
+      localStorage.setItem('reason',document.getElementById('inp2').value);
+      const parentY = document.getElementById('div2') ;  
+     const paraY = document.createElement('P');
+     para5.classList.add('red');
+
+     paraY.append(localStorage.getItem('reason'));
+     parentY.append(paraY);
+     document.getElementById('inp2').value = '';
+
+     paraY.onclick = function(){
+    localStorage.removeItem('reason');
+    paraY.style.display ='none';
+    location.reload();
+}
+}
+});
+    
 
 
 
@@ -29,6 +82,7 @@ if(!!localStorage.getItem('task')){
 const parent = document.getElementById('div') ;  
 para.classList.add('red');
 para.append(localStorage.getItem('task'));
+
 parent.append(para);
 
 };
