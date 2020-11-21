@@ -20,15 +20,17 @@
     <div  id="div2" >
 
     </div>
-    <input type="text" id="inp2" value='ADD A THE REASON HERE...' onfocus="if (this.value=='ADD A THE REASON HERE...') this.value='';">
+    <!--<input type="text" id="inp2" value='ADD A THE REASON HERE...' onfocus="if (this.value=='ADD A THE REASON HERE...') this.value='';">-->
    
   
-
-
+<audio id="audio">
+<source src="Ding Sound Effect.mp3" type="audio/mpeg">
+</audio>
 
 <script type="text/javascript">
+const audio = document.getElementById('audio');
 
-
+/*
 const parax = document.createElement('P');
 if(!!localStorage.getItem('reason')){
 const parent2 = document.getElementById('div2') ;  
@@ -39,20 +41,21 @@ parent2.append(parax);
 
 };
 
-
-
+*/
+/*
 parax.onclick = function(){
- 
+    
     localStorage.removeItem('reason');
     parax.style.display ='none';
-    location.reload();
+    //location.reload();
+  
    
-}
+}*/
 
 
-const inpt2 = document.getElementById('inp2');
+//const inpt2 = document.getElementById('inp2');
 
-
+/*
 inpt2.addEventListener('keyup', function(event){
     if(event.keyCode === 13){
 
@@ -72,7 +75,7 @@ inpt2.addEventListener('keyup', function(event){
 }
 }
 });
-    
+    */
 
 
 
@@ -90,10 +93,13 @@ parent.append(para);
 
 
 para.onclick = function(){
- 
+    audio.play();
     localStorage.removeItem('task');
     para.style.display ='none';
-    location.reload();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
    
 }
 
@@ -112,8 +118,13 @@ parent2.append(para2);
 
 };
 para2.onclick = function(){
+    audio.play();
     localStorage.removeItem('task2');
-    location.reload();
+    para2.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 const para3 = document.createElement('P');
 if(!!localStorage.getItem('task3')){
@@ -127,8 +138,13 @@ parent3.append(para3);
 
 };
 para3.onclick = function(){
+    audio.play();
     localStorage.removeItem('task3');
-    location.reload();
+    para3.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 
 const para4 = document.createElement('P');
@@ -143,8 +159,13 @@ parent4.append(para4);
 
 };
 para4.onclick = function(){
+    audio.play();
     localStorage.removeItem('task4');
-    location.reload();
+    para4.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 
 const para5 = document.createElement('P');
@@ -159,8 +180,13 @@ parent5.append(para5);
 
 };
 para5.onclick = function(){
+    audio.play();
     localStorage.removeItem('task5');
-    location.reload();
+    para5.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 
 const inpt = document.getElementById('inp');
@@ -182,7 +208,11 @@ inpt.addEventListener('keyup', function(event){
      para5.onclick = function(){
     localStorage.removeItem('task5');
     para5.style.display ='none';
-    location.reload();
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
     
 
@@ -202,7 +232,11 @@ inpt.addEventListener('keyup', function(event){
      para4.onclick = function(){
     localStorage.removeItem('task4');
     para4.style.display ='none';
-    location.reload();
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 
               }
@@ -218,7 +252,11 @@ inpt.addEventListener('keyup', function(event){
      para.onclick = function(){
     localStorage.removeItem('task');
     para.style.display ='none';
-    location.reload();
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 
         }
@@ -234,7 +272,11 @@ inpt.addEventListener('keyup', function(event){
      para.onclick = function(){
     localStorage.removeItem('task');
     para.style.display ='none';
-    location.reload();
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 }
 
               }else{
@@ -249,7 +291,11 @@ inpt.addEventListener('keyup', function(event){
      para.onclick = function(){
     localStorage.removeItem('task');
     para.style.display ='none';
-    location.reload();
+    audio.play();
+setTimeout(() => {
+    location.reload()
+}, 2000);
+    
 
    
 }
