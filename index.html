@@ -91,7 +91,7 @@ parent.append(para);
 };
 
 
-
+//make sound when clicking a task
 para.onclick = function(){
     audio.play();
     localStorage.removeItem('task');
@@ -126,6 +126,9 @@ para2.onclick = function(){
 }, 2000);
     
 }
+
+
+
 const para3 = document.createElement('P');
 if(!!localStorage.getItem('task3')){
 
@@ -146,6 +149,9 @@ para3.onclick = function(){
 }, 2000);
     
 }
+
+
+
 
 const para4 = document.createElement('P');
 if(!!localStorage.getItem('task4')){
@@ -188,6 +194,74 @@ para5.onclick = function(){
 }, 2000);
     
 }
+const para6 = document.createElement('P');
+if(!!localStorage.getItem('task6')){
+
+const parent6 = document.getElementById('div') ;  
+
+para6.classList.add('red');
+
+para6.append(localStorage.getItem('task6'));
+parent6.append(para6);
+
+};
+
+para6.onclick = function(){
+    audio.play();
+    localStorage.removeItem('task6');
+    para6.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+
+
+
+const para7 = document.createElement('P');
+if(!!localStorage.getItem('task7')){
+
+const parent7 = document.getElementById('div') ;  
+
+para7.classList.add('red');
+
+para7.append(localStorage.getItem('task7'));
+parent7.append(para7);
+
+};
+
+para7.onclick = function(){
+    audio.play();
+    localStorage.removeItem('task7');
+    para7.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+
+
+const para8 = document.createElement('P');
+if(!!localStorage.getItem('task8')){
+
+const parent8 = document.getElementById('div') ;  
+
+para8.classList.add('red');
+
+para8.append(localStorage.getItem('task8'));
+parent8.append(para8);
+
+};
+
+para8.onclick = function(){
+    audio.play();
+    localStorage.removeItem('task8');
+    para8.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
 
 const inpt = document.getElementById('inp');
 
@@ -195,7 +269,85 @@ const inpt = document.getElementById('inp');
 
 inpt.addEventListener('keyup', function(event){
     if(event.keyCode === 13){
-      if(!!localStorage.getItem('task4')){
+
+        if(!!localStorage.getItem('task7')){
+      localStorage.setItem('task8',document.getElementById('inp').value);
+      const parent8 = document.getElementById('div') ;  
+     const para8 = document.createElement('P');
+     para8.classList.add('red');
+
+     para8.append(localStorage.getItem('task8'));
+     parent8.append(para8);
+     document.getElementById('inp').value = '';
+
+     para8.onclick = function(){
+    localStorage.removeItem('task8');
+    para8.style.display ='none';
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+    
+
+
+              }
+
+
+
+        else if(!!localStorage.getItem('task6')){
+      localStorage.setItem('task7',document.getElementById('inp').value);
+      const parent7 = document.getElementById('div') ;  
+     const para7 = document.createElement('P');
+     para7.classList.add('red');
+
+     para7.append(localStorage.getItem('task7'));
+     parent7.append(para7);
+     document.getElementById('inp').value = '';
+
+     para7.onclick = function(){
+    localStorage.removeItem('task7');
+    para7.style.display ='none';
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+    
+
+
+              }
+        
+        else if(!!localStorage.getItem('task5')){
+      localStorage.setItem('task6',document.getElementById('inp').value);
+      const parent6 = document.getElementById('div') ;  
+     const para6 = document.createElement('P');
+     para6.classList.add('red');
+
+     para6.append(localStorage.getItem('task6'));
+     parent6.append(para6);
+     document.getElementById('inp').value = '';
+
+     para6.onclick = function(){
+    localStorage.removeItem('task6');
+    para6.style.display ='none';
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+    
+
+
+              }
+
+
+
+
+      else if(!!localStorage.getItem('task4')){
       localStorage.setItem('task5',document.getElementById('inp').value);
       const parent5 = document.getElementById('div') ;  
      const para5 = document.createElement('P');
