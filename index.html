@@ -30,52 +30,10 @@
 <script type="text/javascript">
 const audio = document.getElementById('audio');
 
-/*
-const parax = document.createElement('P');
-if(!!localStorage.getItem('reason')){
-const parent2 = document.getElementById('div2') ;  
-parax.classList.add('red');
-parax.append(localStorage.getItem('reason'));
-
-parent2.append(parax);
-
-};
-
-*/
-/*
-parax.onclick = function(){
-    
-    localStorage.removeItem('reason');
-    parax.style.display ='none';
-    //location.reload();
-  
    
-}*/
 
 
-//const inpt2 = document.getElementById('inp2');
 
-/*
-inpt2.addEventListener('keyup', function(event){
-    if(event.keyCode === 13){
-
-      localStorage.setItem('reason',document.getElementById('inp2').value);
-      const parentY = document.getElementById('div2') ;  
-     const paraY = document.createElement('P');
-     para5.classList.add('red');
-
-     paraY.append(localStorage.getItem('reason'));
-     parentY.append(paraY);
-     document.getElementById('inp2').value = '';
-
-     paraY.onclick = function(){
-    localStorage.removeItem('reason');
-    paraY.style.display ='none';
-    location.reload();
-}
-}
-});
-    */
 
 
 
@@ -263,14 +221,151 @@ para8.onclick = function(){
     
 }
 
+
+
+
+const para9 = document.createElement('P');
+if(!!localStorage.getItem('task9')){
+
+const parent9 = document.getElementById('div') ;  
+
+para9.classList.add('red');
+
+para9.append(localStorage.getItem('task9'));
+parent9.append(para9);
+
+};
+
+para9.onclick = function(){
+    audio.play();
+    localStorage.removeItem('task9');
+    para9.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+
+
+
+const para10 = document.createElement('P');
+if(!!localStorage.getItem('task10')){
+
+const parent10 = document.getElementById('div') ;  
+
+para10.classList.add('red');
+
+para10.append(localStorage.getItem('task10'));
+parent10.append(para10);
+
+};
+
+para10.onclick = function(){
+    audio.play();
+    localStorage.removeItem('task10');
+    para10.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+
+
+
+
+
+const para11 = document.createElement('P');
+if(!!localStorage.getItem('task11')){
+
+const parent11 = document.getElementById('div') ;  
+
+para11.classList.add('red');
+
+para11.append(localStorage.getItem('task11'));
+parent11.append(para11);
+
+};
+
+para11.onclick = function(){
+    audio.play();
+    localStorage.removeItem('task11');
+    para11.style.display ='none';
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+
+
+
+
+
 const inpt = document.getElementById('inp');
+
+
+
 
 
 
 inpt.addEventListener('keyup', function(event){
     if(event.keyCode === 13){
+         if(!!localStorage.getItem('task10')){
+    localStorage.setItem('task11',document.getElementById('inp').value);
+                        const parent11 = document.getElementById('div') ;  
+     const para11 = document.createElement('P');
+     para11.classList.add('red');
+     para11.append(localStorage.getItem('task11'));
+     parent11.append(para11);
+     document.getElementById('inp').value = '';
+     para11.onclick = function(){
+    localStorage.removeItem('task11');
+    para11.style.display ='none';
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+}
 
-        if(!!localStorage.getItem('task7')){
+        else if(!!localStorage.getItem('task9')){
+    localStorage.setItem('task10',document.getElementById('inp').value);
+                        const parent10 = document.getElementById('div') ;  
+     const para10 = document.createElement('P');
+     para10.classList.add('red');
+     para10.append(localStorage.getItem('task10'));
+     parent10.append(para10);
+     document.getElementById('inp').value = '';
+     para10.onclick = function(){
+    localStorage.removeItem('task10');
+    para10.style.display ='none';
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+}
+
+         else if(!!localStorage.getItem('task8')){
+    localStorage.setItem('task9',document.getElementById('inp').value);
+                        const parent9 = document.getElementById('div') ;  
+     const para9 = document.createElement('P');
+     para9.classList.add('red');
+     para9.append(localStorage.getItem('task9'));
+     parent9.append(para2);
+     document.getElementById('inp').value = '';
+     para9.onclick = function(){
+    localStorage.removeItem('task9');
+    para9.style.display ='none';
+    audio.play();
+    setTimeout(() => {
+    location.reload()
+}, 2000);
+    
+}
+}
+        else if(!!localStorage.getItem('task7')){
       localStorage.setItem('task8',document.getElementById('inp').value);
       const parent8 = document.getElementById('div') ;  
      const para8 = document.createElement('P');
@@ -293,6 +388,8 @@ inpt.addEventListener('keyup', function(event){
 
 
               }
+              
+     
 
 
 
@@ -431,7 +528,11 @@ inpt.addEventListener('keyup', function(event){
     
 }
 
-              }else{
+}
+
+
+
+else{
                 localStorage.setItem('task', document.getElementById('inp').value);
      const parent = document.getElementById('div') ;  
      const para = document.createElement('p');
@@ -465,7 +566,7 @@ setTimeout(() => {
 
 
 
-//if we click 3la a certain task => delete that task and it's local storage 
+
 
 
 
