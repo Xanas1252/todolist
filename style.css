@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
 p{
-    
     display: block;
     cursor: pointer;
     text-transform: uppercase;
     font-family: 'Nunito',sans-serif;
     text-decoration: none;
-    
  }
 
  #inp{
